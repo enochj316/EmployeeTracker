@@ -175,28 +175,40 @@ async function updateEmployeeRole() {
 /**
  * @description   Retrieves and displays all employees
  */
-async function displayAllEmployees() {
-    try {
-        const employees = await getAllEmployeesDetails();
 
-        for (const employee of employees) {
-            if (employee['manager_id'] !== null) {
-                employee.Manager = await getManagerByID(employee['manager_id']);
-                delete employee['manager_id'];
-            } else {
-                employee.Manager = 'None';
-                delete employee['manager_id'];
-            }
-        }
-        const footer = displayHeadline('All Employees');
-        console.table(employees);
-        displayFooter(footer);
-    } catch (err) {
-        if (err) {
-            throw err;
-        }
+async function displayAllEmployees() {
+    let query = "SELECT * FROM employee";
+
+    const rows = await db.query(query);
+    let employeeNames = [];
+    for (const employee of rows) {
+        employeeNames.push(employee.first_name + " " + employee.last_name);
     }
+    return employeeNames;
 }
+
+// async function displayAllEmployees() {
+//     try {
+//         const employees = await getAllEmployeesDetails();
+
+//         for (const employee of employees) {
+//             if (employee['manager_id'] !== null) {
+//                 employee.Manager = await getManagerByID(employee['manager_id']);
+//                 delete employee['manager_id'];
+//             } else {
+//                 employee.Manager = 'None';
+//                 delete employee['manager_id'];
+//             }
+//         }
+//         const footer = displayHeadline('All Employees');
+//         console.table(employees);
+//         displayFooter(footer);
+//     } catch (err) {
+//         if (err) {
+//             throw err;
+//         }
+//     }
+// }
 
 /**
  * @description   Retrieves and displays all employees in a department
