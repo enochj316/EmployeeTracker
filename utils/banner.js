@@ -5,7 +5,7 @@ function createBanner() {
         figlet(
             'Employee Manager',
             {
-                font: 'Big',
+                font: 'Small',
                 horizontalLayout: 'default',
                 verticalLayout: 'default'
             },
