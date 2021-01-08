@@ -33,3 +33,7 @@ This was built using Inquirer, MySQL, and Node.
 
 This is app is complete.
 
+### Screenshots
+
+![Screenshot 1](/assets/screenshot.png)
+
