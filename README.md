@@ -10,12 +10,10 @@
 <a name="tech-used"></a>
 * [Build Status](#build-status)
 <a name="build-status"></a>
-* [Credits](#credits)
+* [Video](#video)
 <a name="credits"></a>
-* [License](#license)
-<a name="license"></a>
-* [Questions](#questions)
-<a name="questions"></a>
+
+
 
 ### Description
 
@@ -36,4 +34,10 @@ This is app is complete.
 ### Screenshots
 
 ![Screenshot 1](/assets/screenshot.png)
+
+### Video
+
+[![Sample Video](https://drive.google.com/file/d/1NH2qOZWJ58Txy8LI3ssPQtnqhqR-LZ2W/view?usp=sharing)](https://drive.google.com/file/d/1NH2qOZWJ58Txy8LI3ssPQtnqhqR-LZ2W/view?usp=sharing)
+
+
 
